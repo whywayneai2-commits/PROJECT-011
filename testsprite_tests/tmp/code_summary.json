@@ -1,0 +1,122 @@
+{
+    "tech_stack": [
+        "TypeScript",
+        "Next.js",
+        "Supabase",
+        "CSS Modules",
+        "Lucide React",
+        "Recharts"
+    ],
+    "features": [
+        {
+            "name": "Authentication",
+            "description": "User login, signup, forgot password, and session management using Supabase Auth.",
+            "files": [
+                "src/app/login/page.tsx",
+                "src/app/signup/page.tsx",
+                "src/app/auth/callback/route.ts",
+                "src/app/login/actions.ts"
+            ]
+        },
+        {
+            "name": "Landing Page",
+            "description": "Public facing landing page for unauthenticated users.",
+            "files": [
+                "src/components/LandingPage.tsx",
+                "src/components/LandingPage.module.css"
+            ]
+        },
+        {
+            "name": "App Layout",
+            "description": "Global application layout for authenticated users, including Sidebar and TopBar.",
+            "files": [
+                "src/components/layout/AppLayout.tsx",
+                "src/components/layout/Sidebar.tsx",
+                "src/components/layout/TopBar.tsx",
+                "src/components/layout/Layout.module.css"
+            ]
+        },
+        {
+            "name": "Dashboard",
+            "description": "Main user dashboard with overview stats, today's tasks, and widgets.",
+            "files": [
+                "src/components/dashboard/Dashboard.tsx",
+                "src/components/dashboard/OverviewCards.tsx",
+                "src/components/dashboard/RightPanel.tsx",
+                "src/components/dashboard/TaskCard.tsx",
+                "src/components/dashboard/Dashboard.module.css"
+            ]
+        },
+        {
+            "name": "Task Management",
+            "description": "Comprehensive task list with filtering (Today, Week, Priority), sorting, and CRUD operations.",
+            "files": [
+                "src/app/tasks/page.tsx",
+                "src/app/tasks/TasksClient.tsx",
+                "src/app/tasks/ListViewTaskCard.tsx",
+                "src/app/tasks/TaskDrawer.tsx",
+                "src/app/tasks/Tasks.module.css"
+            ]
+        },
+        {
+            "name": "Create Task Modal",
+            "description": "Global modal for creating new tasks with detailed properties.",
+            "files": [
+                "src/components/modals/CreateTaskModal.tsx",
+                "src/components/modals/TaskModal.module.css"
+            ]
+        },
+        {
+            "name": "Calendar View",
+            "description": "Monthly calendar view showing tasks as bars on their due dates.",
+            "files": [
+                "src/app/calendar/page.tsx",
+                "src/app/calendar/CalendarClient.tsx",
+                "src/app/calendar/Calendar.module.css"
+            ]
+        },
+        {
+            "name": "Analytics",
+            "description": "Visual analytics dashboard with charts for productivity, task completion, and categories.",
+            "files": [
+                "src/app/analytics/page.tsx",
+                "src/app/analytics/AnalyticsClient.tsx",
+                "src/app/analytics/Analytics.module.css"
+            ]
+        },
+        {
+            "name": "Gamification",
+            "description": "User engagement features including XP, levels, daily streaks, and badges.",
+            "files": [
+                "src/app/gamification/page.tsx",
+                "src/app/gamification/GamificationClient.tsx",
+                "src/app/gamification/Gamification.module.css"
+            ]
+        },
+        {
+            "name": "Focus Mode",
+            "description": "Pomodoro-style focus timer with multiple modes and task selection.",
+            "files": [
+                "src/app/focus/page.tsx",
+                "src/app/focus/FocusClient.tsx",
+                "src/app/focus/Focus.module.css"
+            ]
+        },
+        {
+            "name": "Settings",
+            "description": "User settings for profile, theme, and notifications.",
+            "files": [
+                "src/app/settings/page.tsx",
+                "src/app/settings/SettingsClient.tsx",
+                "src/app/settings/Settings.module.css"
+            ]
+        },
+        {
+            "name": "Theme Management",
+            "description": "Dark/Light mode toggling component.",
+            "files": [
+                "src/components/ThemeToggle.tsx"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+.item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    /* Slightly lighter than card bg */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease;
+    animation: slideIn 0.3s ease-out;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.item.completed {
+    opacity: 0.6;
+}
+
+.checkbox {
+    appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid #a1a1aa;
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.checkbox:checked {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.text {
+    font-size: 1rem;
+    color: var(--foreground);
+    transition: color 0.2s ease;
+}
+
+.completed .text {
+    text-decoration: line-through;
+    color: #71717a;
+}
+
+.meta {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    color: #a1a1aa;
+    align-items: center;
+}
+
+.badge {
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+}
+
+.priority-high {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+}
+
+.priority-medium {
+    background: rgba(234, 179, 8, 0.2);
+    color: #fde047;
+}
+
+.priority-low {
+    background: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+}
+
+.category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+}
+
+.deleteBtn {
+    opacity: 0;
+    color: #ef4444;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+}
+
+.item:hover .deleteBtn {
+    opacity: 1;
+}
+
+.deleteBtn:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

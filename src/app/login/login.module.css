@@ -1,0 +1,244 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--background);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    background: var(--surface);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+}
+
+.leftColumn {
+    flex: 1;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    overflow: hidden;
+}
+
+.illustration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.quoteContainer {
+    position: relative;
+    z-index: 2;
+}
+
+.quote {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.author {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.rightColumn {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--surface);
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #a1a1aa;
+    font-size: 0.95rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--foreground);
+    margin-left: 0.25rem;
+}
+
+.input {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--foreground);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: var(--input-focus);
+    box-shadow: 0 0 0 2px var(--primary-glow);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--foreground);
+    cursor: pointer;
+}
+
+.checkbox {
+    accent-color: var(--primary);
+    width: 16px;
+    height: 16px;
+}
+
+.forgotPassword {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+.primaryButton {
+    background: var(--primary);
+    color: white;
+    padding: 0.875rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.primaryButton:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #52525b;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.divider:not(:empty)::before {
+    margin-right: 1em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: 1em;
+}
+
+.googleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--foreground);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.googleButton:hover {
+    background: var(--surface-hover);
+    border-color: #52525b;
+}
+
+.footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #a1a1aa;
+}
+
+.link {
+    color: var(--primary);
+    font-weight: 500;
+    margin-left: 0.25rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .leftColumn {
+        display: none;
+    }
+
+    .rightColumn {
+        padding: 2rem;
+    }
+}
